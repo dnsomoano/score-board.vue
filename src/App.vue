@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>This is a Scoreboard</h1>
+    <section class="team-container">
+    <ScoreCounter />
+    <ScoreCounter />
+  </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ScoreCounter from './components/ScoreCounter.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    ScoreCounter
   }
 }
 </script>
@@ -24,5 +27,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 </style>
